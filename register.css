@@ -194,9 +194,3 @@ body {
     margin-top: 1.5rem;
     color: #777;
 }
-
-@media (max-width: 600px) {
-    .form-container {
-        width: 100%;
-    }
-}
