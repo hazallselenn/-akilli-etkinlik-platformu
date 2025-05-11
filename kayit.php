@@ -3,7 +3,7 @@ include 'inc/config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = guvenli_giris($_POST['username']);
-    $email = guvenli_giri($_POST['email']);
+    $email = guvenli_giris($_POST['email']);
     $password = password_hash($_POST['new-password'], PASSWORD_DEFAULT);
     $firstName = guvenli_giris($_POST['first-name']); 
     $lastName = guvenli_giris($_POST['last-name']);
@@ -343,5 +343,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </script>
 
 </body>
+
+<input type="submit" class="button-register">
+
 
 </html>
