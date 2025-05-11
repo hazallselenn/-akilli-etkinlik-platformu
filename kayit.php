@@ -344,7 +344,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </body>
 
-<input type="submit" class="button-register">
 
 
 </html>
