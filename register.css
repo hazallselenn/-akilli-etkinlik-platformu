@@ -194,3 +194,11 @@ body {
     margin-top: 1.5rem;
     color: #777;
 }
+
+.button-register {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
