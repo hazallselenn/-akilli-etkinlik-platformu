@@ -1,0 +1,531 @@
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    padding: 1rem 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.brand a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #007bff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.brand i {
+    font-size: 2rem;
+}
+
+.navbar nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navbar nav ul li a {
+    color: #333;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Giriş Butonları */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.auth-buttons .btn-auth {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s, border-radius 0.5s ease;
+}
+
+.auth-buttons .btn-auth:hover {
+    background-color: #0056b3;
+    border-radius: 20px;
+}
+
+
+
+/* Tanıtım Bölümü */
+.intro-section {
+    background: url('AdobeStock_758555005.jpeg') no-repeat center center/cover;
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9); /* Hafif şeffaf beyaz yazı rengi */
+    filter: hue-rotate(-30deg) brightness(0.9) saturate(1.2); /* Mavi ton için filtreler */
+}
+
+.intro-overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Daha güçlü karartma efekti */
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.intro-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.95); /* Başlık için daha opak bir beyaz */
+}
+
+.intro-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85); /* Paragraf için biraz daha düşük opaklık */
+}
+
+
+
+
+
+
+
+
+
+/* Arama Bölümü */
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0; /* Navbar yüksekliğine uyacak şekilde ayarlandı */
+    background-color: #f5f5f5;
+    margin-top: 0px; /* Navbar sabit olduğu için arama bölümü için üst boşluk */
+    
+}
+
+.search-container {
+    display: flex;
+    width: 40%;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0.8rem; /* Küçük bir padding ile boyut küçültüldü */
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+
+/* Arama Sonuçları Bölümü */
+.search-results {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+.search-results h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+/* Önerilen Etkinlikler Bölümü */
+.recommended-events {
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.recommended-events h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.event-cards {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Etkinlik Kartı Stilleri */
+.event-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.event-card h3 {
+    font-size: 1.25rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.event-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Kart Hover Efekti */
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f0f8ff; /* Hafif bir arka plan değişimi */
+}
+
+/* Katıl Butonu */
+.btn-join {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Buton Hover Efekti */
+.btn-join:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Buton hafifçe büyüyor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Butona gölge ekleniyor */
+}
+
+/* Popüler Etkinlikler Bölümü */
+.popular-events {
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.popular-events h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Popüler Etkinlikler Bölümü */
+.popular-events {
+    padding: 2rem 0;
+    background-color: #f9f9f9; /* Hafif turkuaz arka plan */
+    text-align: center;
+}
+
+.popular-events h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Popüler Etkinlik Kartları */
+.popular-events .event-cards {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.popular-events .event-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.popular-events .event-card h3 {
+    font-size: 1.25rem;
+    color: #00796b; /* Turkuaz tonlu başlık rengi */
+    margin-bottom: 0.5rem;
+}
+
+.popular-events .event-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Popüler Etkinlik Kartı Hover Efekti */
+.popular-events .event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #e0f2f1; /* Hafif arka plan değişimi ile turkuaz vurgu */
+}
+
+.popular-events .btn-join {
+    background-color: #00796b; /* Turkuaz tonlu buton rengi */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.popular-events .btn-join:hover {
+    background-color: #004d40; /* Koyu turkuaz hover rengi */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tüm Etkinlikler Bölümü */
+.all-events {
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.all-events h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.all-events .event-cards {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.all-events .event-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.all-events .event-card h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.all-events .event-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.all-events .event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.all-events .btn-join {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.all-events .btn-join:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Etkinlik Ekleme Bölümü */
+.add-event {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.add-event h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.event-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.event-form label {
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+}
+
+.event-form input[type="text"],
+.event-form input[type="date"],
+.event-form input[type="time"],
+.event-form textarea,
+.event-form select {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.event-form textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footer {
+    background-color: #f0f4f8; /* Açık gri arka plan */
+    color: #333; /* Koyu gri metin */
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #007bff; /* Başlıklar için mavi ton */
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555; /* Açık gri metin rengi */
+}
+
+.footer-section.social a {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    color: #007bff; /* Mavi sosyal medya simgeleri */
+    transition: color 0.3s;
+}
+
+.footer-section.social a:hover {
+    color: #0056b3; /* Daha koyu mavi ton hover */
+}
+
+.footer-bottom {
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+    color: #777; /* Açık gri alt metin */
+}

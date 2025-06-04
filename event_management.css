@@ -1,0 +1,323 @@
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+ /* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.brand a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #007bff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.brand i {
+    font-size: 2rem;
+}
+
+.navbar nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navbar nav ul li a {
+    color: #333;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Giriş Butonları */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.auth-buttons .btn-auth {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s, border-radius 0.5s ease;
+}
+
+.auth-buttons .btn-auth:hover {
+    background-color: #0056b3;
+    border-radius: 20px;
+}
+
+
+/* Ana Container */
+.management-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    padding: 2rem;
+    margin-top: 3rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+}
+
+/* Etkinlik Ekleme Formu */
+.add-event-section,
+.my-events-section,
+.joined-events-section {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+}
+
+.add-event-section h2,
+.my-events-section h2,
+.joined-events-section h2 {
+    color: #007bff;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+#event-form label {
+    display: block;
+    margin: 0.5rem 0;
+    font-weight: 500;
+    text-align: left;
+}
+
+#event-form input,
+#event-form select,
+#event-form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-add {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #0056b3;
+}
+
+/* Etkinlik Listesi Başlık */
+.event-heading {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Etkinlik Listesi */
+.event-list,
+.joined-event-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.event-list li,
+.joined-event-list li {
+    padding: 0.8rem;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Düğmeler */
+.btn-edit,
+.btn-delete,
+.btn-remove {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 0.9rem;
+}
+
+.btn-edit {
+    background-color: #4caf50;
+}
+
+.btn-edit:hover {
+    background-color: #388e3c;
+}
+
+.btn-delete:hover,
+.btn-remove:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background-color: #f0f4f8; /* Açık gri arka plan */
+    color: #333; /* Koyu gri metin */
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #007bff; /* Başlıklar için mavi ton */
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555; /* Açık gri metin rengi */
+}
+
+.footer-section.social a {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    color: #007bff; /* Mavi sosyal medya simgeleri */
+    transition: color 0.3s;
+}
+
+.footer-section.social a:hover {
+    color: #0056b3; /* Daha koyu mavi ton hover */
+}
+
+.footer-bottom {
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+    color: #777; /* Açık gri alt metin */
+}
+
+/* Modal genel stil */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal içeriği */
+.modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Kapatma butonu */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #007bff;
+}
+
+/* Form başlık */
+.modal-content h2 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+/* Form etiket ve giriş alanları */
+#edit-event-form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #555;
+    text-align: left;
+}
+
+#edit-event-form input,
+#edit-event-form select,
+#edit-event-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Kaydet butonu */
+.btn-save {
+    margin-top: 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-save:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
